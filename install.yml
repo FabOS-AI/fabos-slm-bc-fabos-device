@@ -6,7 +6,7 @@
   tasks:
     - include_role:
         name: inventory_helper
-        tasks_from: create_inventory.yml
+        tasks_from: create_single_host_inventory.yml
 
 - name: "Install - FabOS Device"
   hosts: all
