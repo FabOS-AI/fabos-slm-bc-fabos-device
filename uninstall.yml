@@ -8,10 +8,11 @@
         name: inventory_helper
         tasks_from: create_inventory.yml
 
-- name: "Dummy - uninstall"
-  hosts: localhost
-  connection: local
+- name: "Uninstall - FabOS Device"
+  hosts: all
   gather_facts: no
+  vars:
+    state: absent
   tasks:
-    - ansible.builtin.debug:
-        msg: "dummy uninstall.yml"
+    - ansible.builtin.include_role:
+        name: "node_exporter"
