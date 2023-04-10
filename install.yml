@@ -10,7 +10,8 @@
 
 - name: "Install - FabOS Device"
   hosts: all
-  gather_facts: no
+  gather_facts: yes
+  become: yes
   tasks:
     - ansible.builtin.include_role:
         name: "node_exporter"

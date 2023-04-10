@@ -10,7 +10,8 @@
 
 - name: "Uninstall - FabOS Device"
   hosts: all
-  gather_facts: no
+  gather_facts: yes
+  become: yes
   vars:
     state: absent
   tasks:
