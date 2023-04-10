@@ -1,4 +1,13 @@
 ---
+- name: "Create inventory with target host(s)"
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - include_role:
+        name: inventory_helper
+        tasks_from: create_inventory.yml
+
 - name: "Dummy - uninstall"
   hosts: localhost
   connection: local
