@@ -1,1 +1,3 @@
-# fabos-slm-bc-fabos-device
+# Ansible Collection - fabos.fabos_device
+
+Documentation for the collection.
