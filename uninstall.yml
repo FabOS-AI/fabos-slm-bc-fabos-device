@@ -17,3 +17,13 @@
   tasks:
     - ansible.builtin.include_role:
         name: "node_exporter"
+
+- name: "Remove host from Prometheus targets"
+  hosts: all
+  connection: local
+  gather_facts: no
+  become: no
+  tasks:
+    - ansible.builtin.include_role:
+        name: "prometheus"
+        tasks_from: remove_target.yml
