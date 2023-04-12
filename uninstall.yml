@@ -27,3 +27,5 @@
     - ansible.builtin.include_role:
         name: "prometheus"
         tasks_from: remove_target.yml
+      vars:
+        node_exporter_port: 9100
