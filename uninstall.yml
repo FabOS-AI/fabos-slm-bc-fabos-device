@@ -20,9 +20,10 @@
 
 - name: "Remove host from Prometheus targets"
   hosts: all
-  connection: local
   gather_facts: no
   become: no
+  vars:
+    ansible_connection: local
   tasks:
     - ansible.builtin.include_role:
         name: "prometheus"
