@@ -6,5 +6,5 @@
 
 - name: "Remove resource with id = '{{ resource_id }}'"
   ansible.builtin.uri:
-    url: "https://{{ prometheus_configurator_host_name }}:{{ prometheus_configurator_port }}/prometheus/slm-resource-target/{{ resource_id}}"
+    url: "http://{{ prometheus_configurator_host_name }}:{{ prometheus_configurator_port }}/prometheus/slm-resource-target/{{ resource_id}}"
     method: DELETE

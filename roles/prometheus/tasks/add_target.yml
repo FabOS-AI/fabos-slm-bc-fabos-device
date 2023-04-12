@@ -7,7 +7,7 @@
 
 - name: "Add resource with id = '{{ resource_id }}', address = '{{ ansible_host }}' and port = '{{ node_exporter_port }}'"
   ansible.builtin.uri:
-    url: "https://{{ prometheus_configurator_host_name }}:{{ prometheus_configurator_port }}/prometheus/slm-resource-target"
+    url: "http://{{ prometheus_configurator_host_name }}:{{ prometheus_configurator_port }}/prometheus/slm-resource-target"
     method: POST
     body_format: form-urlencoded
     body:
