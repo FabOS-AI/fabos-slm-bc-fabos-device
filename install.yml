@@ -22,6 +22,12 @@
   gather_facts: no
   become: no
   tasks:
+    - command: hostname
+      register: hostname
+
+    - debug:
+        var: hostname
+
     - ansible.builtin.include_role:
         name: "prometheus"
         tasks_from: add_target.yml
