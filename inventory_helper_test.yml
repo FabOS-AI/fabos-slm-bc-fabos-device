@@ -1,0 +1,19 @@
+---
+- name: Test Inventory Helper
+  hosts: localhost
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: Set facts
+      ansible.builtin.set_fact:
+        resource_id: "eb682a58-9250-4900-9183-ad445ba9ea2d"
+        consul_url: "http://localhost:8500"
+        consul_token: "dDCGUKJL3IoyS8vdfRyuOQ1b"
+        vault_url: "http://localhost:8200"
+        vault_approle_role_id: "resource-registry"
+        vault_approle_secret_id: "cd116b0b-f6d1-46e5-f714-bd5fc4ed9b36"
+
+    - name: Run inventory_helper role - tasks_from create_single_host_inventory
+      ansible.builtin.include_role:
+        name: inventory_helper
+        tasks_from: create_single_host_inventory.yml
