@@ -3,7 +3,7 @@
   ansible.builtin.assert:
     that:
       - resource_id is defined and resource_id | length > 0
-      - node_exporter_port is defined and node_exporter_port | length > 0
+      - node_exporter_port is defined
 
 - name: "Add resource with id = '{{ resource_id }}', address = '{{ ansible_host }}' and port = '{{ node_exporter_port }}'"
   ansible.builtin.uri:
