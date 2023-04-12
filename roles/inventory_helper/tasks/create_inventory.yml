@@ -18,10 +18,6 @@
 - set_fact:
     vault_lookup_base_info: "url={{ vault_url }} auth_method=approle role_id={{ vault_approle_role_id }} secret_id={{ vault_approle_secret_id }}"
 
-- name: "Compose service id from resource id"
-  set_fact:
-    service_name: "k3s_{{ resource_id }}"
-
 - name: "Get Service nodes of '{{ service_name }}'"
   uri:
     url: "{{ consul_url }}/v1/catalog/service/{{ service_name }}"
