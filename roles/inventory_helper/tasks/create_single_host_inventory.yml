@@ -75,6 +75,7 @@
     name: "{{ ip_address }}"
     groups: target_host
     ansible_connection: ssh
+    ansible_port: "{{ remote_access_service.Port | default(22, true) }}"
     ansible_ssh_user: "{{ username }}"
     ansible_ssh_pass: "{{ password }}"
     ansible_become_pass: "{{ password }}"
