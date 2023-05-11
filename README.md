@@ -1,3 +1,1 @@
-# Ansible Collection - fabos.fabos_device
-
-Documentation for the collection.
+The Service Lifecycle Management was transferred to the [Eclipse Service Lifecycle Management](https://projects.eclipse.org/projects/dt.slm) project at the Eclipse Foundation. Therefore, this repository was transferred to the new repository [eclipse-slm/slm-cc-base](https://github.com/eclipse-slm/slm-cc-base) and set to archived.
